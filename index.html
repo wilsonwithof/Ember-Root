@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ember Root · Je koffie mag even pauze nemen</title>
+  <meta name="description" content="Ember Root: warme, kruidige thee met karakter voor koffieliefhebbers. Vier smaken, drie zonder cafeïne.">
+  <meta name="theme-color" content="#3B2420">
+  <meta property="og:title" content="Ember Root · Je koffie mag even pauze nemen">
+  <meta property="og:description" content="Warme, kruidige thee voor koffieliefhebbers. Drie van onze vier smaken zijn cafeïnevrij.">
+  <meta property="og:image" content="img/hero-lineup.jpg">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#inhoud">Naar de inhoud</a>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Ember Root, naar boven">
+      <img src="img/EmberRoot_logo.svg" alt="Ember Root" width="170" height="48">
+    </a>
+    <nav aria-label="Hoofdmenu">
+      <ul class="nav__links">
+        <li><a href="#verhaal">Ons verhaal</a></li>
+        <li><a href="#smaken">Smaken</a></li>
+        <li><a href="#ritueel">Ritueel</a></li>
+      </ul>
+    </nav>
+    <a href="#nieuwsbrief" class="btn btn--primary btn--sm">Schrijf je in <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </header>
+
+  <main id="inhoud">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__text">
+        <p class="eyebrow reveal"><span class="dot" aria-hidden="true"></span>Thee voor koffieliefhebbers</p>
+        <h1 class="hero__title" data-split>Je koffie mag even <em>pauze</em> nemen.</h1>
+        <p class="hero__lead reveal">Warme, kruidige thee met karakter. Vol genoeg om je derde kop niet te missen, met veel minder cafeïne. Drie van onze vier smaken hebben er zelfs helemaal geen.</p>
+        <div class="hero__ctas reveal">
+          <a href="#smaken" class="btn btn--primary">Ontdek je eerste smaak <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#verhaal" class="btn btn--ghost">Lees ons verhaal <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <dl class="stats reveal">
+          <div><dt><span data-count="4">4</span></dt><dd>smaken</dd></div>
+          <div><dt><span data-count="3">3</span></dt><dd>zonder cafeïne</dd></div>
+          <div><dt><span data-count="5">5</span> min</dt><dd>tot je eerste slok</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero__visual" data-tilt-area>
+        <div class="hero__glow" aria-hidden="true"></div>
+        <canvas class="hero__herbs" aria-hidden="true"></canvas>
+        <picture class="hero__photo" data-depth="0.6">
+          <source srcset="img/hero-lineup.webp" type="image/webp">
+          <img src="img/hero-lineup.jpg" alt="De vier smaken van Ember Root op een houten cafétafel, met gember, rooibos en kamille die door de lucht vallen" width="1045" height="1400" fetchpriority="high">
+        </picture>
+        <div class="stamp" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <defs><path id="stampCircle" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+            <circle cx="60" cy="60" r="58"/>
+            <text><textPath href="#stampCircle">minder cafeïne · meer gloed · </textPath></text>
+          </svg>
+          <svg class="stamp__flame" viewBox="0 0 24 24"><path d="M12 2c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3 0-3-1-5 1-8.5Z"/></svg>
+        </div>
+        <div class="chip" data-depth="1.2">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          <div><strong class="chip__clock" id="clock">15:00</strong><span>het uur van je derde koffie</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-label="Ingrediënten: gember, kurkuma, rooibos, bosbes, citroengras, kamille, honing en groene thee">
+      <div class="marquee__track" aria-hidden="true">
+        <span>Gember</span><i></i><em>Kurkuma</em><i></i><span>Rooibos</span><i></i><em>Bosbes</em><i></i><span>Citroengras</span><i></i><em>Kamille</em><i></i><span>Honing</span><i></i><em>Groene thee</em><i></i>
+        <span>Gember</span><i></i><em>Kurkuma</em><i></i><span>Rooibos</span><i></i><em>Bosbes</em><i></i><span>Citroengras</span><i></i><em>Kamille</em><i></i><span>Honing</span><i></i><em>Groene thee</em><i></i>
+      </div>
+    </div>
+
+    <!-- VERHAAL -->
+    <section class="story" id="verhaal">
+      <div class="story__visuals">
+        <picture class="story__main" data-parallax="-0.06">
+          <source srcset="img/verhaal-lineup.webp" type="image/webp">
+          <img src="img/verhaal-lineup.jpg" alt="Vier doosjes Ember Root op een rij, met kruiden die erboven zweven" width="781" height="1400" loading="lazy">
+        </picture>
+        <figure class="story__video" data-parallax="0.08">
+          <video id="steamVideo" src="img/verhaal-stoom.mp4" poster="img/verhaal-stoom-poster.jpg" muted loop playsinline preload="none" aria-label="Korte video: Rooibos &amp; Forest Berries wordt over ijs in een glazen pot geschonken, daarna verschijnen de vier smaken van Ember Root met vallende kruiden"></video>
+          <button class="video-toggle" type="button" aria-pressed="false" aria-label="Video pauzeren">
+            <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+            <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg>
+          </button>
+        </figure>
+      </div>
+
+      <div class="story__text">
+        <p class="eyebrow eyebrow--light reveal">Ons verhaal</p>
+        <blockquote class="story__quote" data-words>“Ember is de gloed die blijft, als het vuur al lang uit is.”</blockquote>
+        <p class="reveal">We houden van koffie. Echt. Van de geur om zeven uur, van de kop die je vasthoudt tijdens een gesprek. Alleen werd het om drie uur ’s middags een gewoonte in plaats van een keuze, en lagen we ’s avonds langer wakker dan we wilden.</p>
+        <p class="reveal">Dus zochten we iets dat even warm aanvoelt, maar je avond met rust laat. Gember en kurkuma voor de pit, rooibos voor de diepte, kamille voor het einde van de dag. Geen preek, geen detox. Gewoon een glas dat je met plezier vasthoudt.</p>
+        <ol class="day" aria-label="Een dag met Ember Root">
+          <li class="reveal"><time>07:00</time><span>Koffie. Die mag blijven.</span></li>
+          <li class="reveal"><time>15:00</time><span>Ginger &amp; Turmeric in plaats van kop drie.</span></li>
+          <li class="reveal"><time>21:00</time><span>Chamomile &amp; Honey. En slapen.</span></li>
+        </ol>
+        <a href="#smaken" class="btn btn--dark reveal">Vind jouw smaak <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </section>
+
+    <!-- SMAKEN -->
+    <section class="flavours" id="smaken">
+      <div class="flavours__head">
+        <div>
+          <p class="eyebrow reveal">Vier smaken</p>
+          <h2 class="reveal">Kies je glas voor elk moment van de dag.</h2>
+        </div>
+        <p class="reveal">Drie smaken zonder cafeïne, één met een klein beetje voor wie ’s ochtends nog een duwtje wil. Tik op een kaart voor de tasting notes.</p>
+      </div>
+
+      <ul class="cards">
+        <li class="card reveal" style="--accent:#C9893F">
+          <button class="card__inner" type="button" aria-pressed="false" aria-label="Ginger &amp; Turmeric, toon tasting notes">
+            <span class="card__front">
+              <span class="card__img"><picture><source srcset="img/smaak-ginger.webp" type="image/webp"><img src="img/smaak-ginger.jpg" alt="IJsthee Ginger &amp; Turmeric in een glazen pot, met stukjes gember ernaast" width="506" height="900" loading="lazy"></picture></span>
+              <span class="card__body">
+                <span class="badge">Cafeïnevrij</span>
+                <span class="card__name">Ginger &amp; Turmeric</span>
+                <span class="card__notes">Pittig en vurig. Gember die even aan je mouw trekt.</span>
+                <span class="card__meta">Trektijd 4–5 min · 15:00</span>
+              </span>
+            </span>
+            <span class="card__back" aria-hidden="true">
+              <span class="card__name">Tasting notes</span>
+              <span class="notes-list"><b>Neus</b> verse gember, citrusschil</span>
+              <span class="notes-list"><b>Smaak</b> warm, licht peperig</span>
+              <span class="notes-list"><b>Afdronk</b> kurkuma, zacht aards</span>
+              <span class="meter" style="--v:85"><span>Pit</span></span>
+              <span class="meter" style="--v:40"><span>Zoet</span></span>
+              <span class="card__meta">Lekker met: een schijfje sinaasappel</span>
+            </span>
+          </button>
+        </li>
+        <li class="card reveal" style="--accent:#8E2F3C">
+          <button class="card__inner" type="button" aria-pressed="false" aria-label="Rooibos &amp; Forest Berries, toon tasting notes">
+            <span class="card__front">
+              <span class="card__img"><picture><source srcset="img/smaak-rooibos.webp" type="image/webp"><img src="img/smaak-rooibos.jpg" alt="Donkerrode Rooibos &amp; Forest Berries met ijs, bosbessen op tafel" width="672" height="900" loading="lazy"></picture></span>
+              <span class="card__body">
+                <span class="badge">Cafeïnevrij</span>
+                <span class="card__name">Rooibos &amp; Forest Berries</span>
+                <span class="card__notes">Diep, zacht en fruitig. Donker als koffie, zonder de nasleep.</span>
+                <span class="card__meta">Trektijd 5–6 min · namiddag</span>
+              </span>
+            </span>
+            <span class="card__back" aria-hidden="true">
+              <span class="card__name">Tasting notes</span>
+              <span class="notes-list"><b>Neus</b> bosbes, vanille, hout</span>
+              <span class="notes-list"><b>Smaak</b> rond, licht honingachtig</span>
+              <span class="notes-list"><b>Afdronk</b> zacht, bijna cacao</span>
+              <span class="meter" style="--v:30"><span>Pit</span></span>
+              <span class="meter" style="--v:75"><span>Zoet</span></span>
+              <span class="card__meta">Lekker met: een scheutje havermelk</span>
+            </span>
+          </button>
+        </li>
+        <li class="card reveal" style="--accent:#7C9A4E">
+          <button class="card__inner" type="button" aria-pressed="false" aria-label="Green Tea &amp; Lemongrass, toon tasting notes">
+            <span class="card__front">
+              <span class="card__img"><picture><source srcset="img/smaak-greentea.webp" type="image/webp"><img src="img/smaak-greentea.jpg" alt="Lichtgroene Green Tea &amp; Lemongrass met munt en citroengras" width="506" height="900" loading="lazy"></picture></span>
+              <span class="card__body">
+                <span class="badge badge--warm">Een beetje cafeïne</span>
+                <span class="card__name">Green Tea &amp; Lemongrass</span>
+                <span class="card__notes">Fris en helder, met een kleine duw voor je ochtend.</span>
+                <span class="card__meta">Trektijd 2–3 min · ochtend</span>
+              </span>
+            </span>
+            <span class="card__back" aria-hidden="true">
+              <span class="card__name">Tasting notes</span>
+              <span class="notes-list"><b>Neus</b> citroengras, gemaaid gras</span>
+              <span class="notes-list"><b>Smaak</b> fris, licht grassig</span>
+              <span class="notes-list"><b>Afdronk</b> kort en helder</span>
+              <span class="meter" style="--v:45"><span>Pit</span></span>
+              <span class="meter" style="--v:25"><span>Zoet</span></span>
+              <span class="card__meta">Tip: water van 80 °C, niet kokend</span>
+            </span>
+          </button>
+        </li>
+        <li class="card reveal" style="--accent:#D9A93F">
+          <button class="card__inner" type="button" aria-pressed="false" aria-label="Chamomile &amp; Honey, toon tasting notes">
+            <span class="card__front">
+              <span class="card__img"><picture><source srcset="img/smaak-chamomile.webp" type="image/webp"><img src="img/smaak-chamomile.jpg" alt="Goudgele Chamomile &amp; Honey in een glazen pot met kamillebloemetjes" width="506" height="900" loading="lazy"></picture></span>
+              <span class="card__body">
+                <span class="badge">Cafeïnevrij</span>
+                <span class="card__name">Chamomile &amp; Honey</span>
+                <span class="card__notes">Zacht en troostend. Voor na je laatste mail.</span>
+                <span class="card__meta">Trektijd 4–5 min · avond</span>
+              </span>
+            </span>
+            <span class="card__back" aria-hidden="true">
+              <span class="card__name">Tasting notes</span>
+              <span class="notes-list"><b>Neus</b> hooi, appel, bloesem</span>
+              <span class="notes-list"><b>Smaak</b> zacht, honingzoet</span>
+              <span class="notes-list"><b>Afdronk</b> lang en rustig</span>
+              <span class="meter" style="--v:10"><span>Pit</span></span>
+              <span class="meter" style="--v:70"><span>Zoet</span></span>
+              <span class="card__meta">Lekker met: een boek, geen scherm</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <!-- RITUEEL -->
+    <section class="ritual" id="ritueel">
+      <div class="ritual__text">
+        <p class="eyebrow reveal">De overstap in drie stappen</p>
+        <h2 class="reveal">Begin niet met stoppen. Begin met één kop.</h2>
+        <ol class="steps">
+          <li class="step"><span class="step__nr">01</span><div><h3>Kies je moment</h3><p>Die ene kop rond 15:00, of na je yogales. Niet je ochtendkoffie, die mag blijven.</p></div></li>
+          <li class="step"><span class="step__nr">02</span><div><h3>Laat hem trekken</h3><p>Vier tot vijf minuten. IJs erbij, glas erbij, telefoon even weg. Probeer de timer hiernaast.</p></div></li>
+          <li class="step"><span class="step__nr">03</span><div><h3>Proef en vergelijk</h3><p>Vertel ons hoe het ging. We lezen alles, ook als je toch koffie koos.</p></div></li>
+        </ol>
+      </div>
+
+      <div class="ritual__visual reveal">
+        <picture>
+          <source srcset="img/ritueel-greentea.webp" type="image/webp">
+          <img src="img/ritueel-greentea.jpg" alt="Een glas Green Tea &amp; Lemongrass naast het doosje op een cafétafel" width="896" height="1200" loading="lazy">
+        </picture>
+        <div class="timer" role="group" aria-label="Trektimer">
+          <svg class="timer__ring" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="44" class="timer__track"/>
+            <circle cx="50" cy="50" r="44" class="timer__progress"/>
+          </svg>
+          <div class="timer__inner">
+            <span class="timer__label">Trektimer</span>
+            <output class="timer__time" id="timerTime" aria-live="polite">4:00</output>
+            <button class="timer__btn" id="timerBtn" type="button">Start</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NIEUWSBRIEF -->
+    <section class="signup" id="nieuwsbrief">
+      <div class="signup__card">
+        <div class="signup__visual">
+          <picture>
+            <source srcset="img/signup-lineup.webp" type="image/webp">
+            <img src="img/signup-lineup.jpg" alt="De vier smaken op een rij met vallende kruiden" width="675" height="1200" loading="lazy">
+          </picture>
+        </div>
+
+        <div class="signup__content">
+          <p class="eyebrow eyebrow--light">Nieuwsbrief</p>
+          <h2>Eerst proeven, dan beslissen.</h2>
+          <p class="signup__lead">Schrijf je in en ontvang warme theetips voor koffie-overstappers, nieuwe smaken als eerste en af en toe een proefpakket.</p>
+
+          <!-- MailerLite embedded form: ER_Signup_Nieuwsbrief (groep Newsletter, double opt-in).
+               Originele embed: nieuwsbrief/mailerlite_form_embed.html. Opmaak van MailerLite vervangen door style.css. -->
+          <div id="mlb2-47944528" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-47944528">
+            <div class="ml-form-align-center">
+              <div class="ml-form-embedWrapper embedForm">
+                <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                  <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2762508/forms/203037013558953199/subscribe" data-code="" method="post" target="_blank">
+                    <div class="ml-form-formContent">
+                      <div class="ml-form-fieldRow">
+                        <div class="ml-field-group ml-field-name ml-validate-required">
+                          <label for="ml-name">Voornaam</label>
+                          <input id="ml-name" aria-required="true" type="text" class="form-control" data-inputmask="" name="fields[name]" placeholder="Je voornaam" autocomplete="given-name">
+                          <span class="field-error">Vul je voornaam in.</span>
+                        </div>
+                      </div>
+                      <div class="ml-form-fieldRow ml-last-item">
+                        <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                          <label for="ml-email">E-mailadres</label>
+                          <input id="ml-email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="je@email.be" autocomplete="email">
+                          <span class="field-error">Vul een geldig e-mailadres in.</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ml-form-checkboxRow ml-validate-required">
+                      <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9"/></svg></span>
+                        <span class="label-description">Ja, ik wil de nieuwsbrief van Ember Root ontvangen. Ik kan me altijd uitschrijven.</span>
+                      </label>
+                      <span class="field-error">Vink dit aan om je in te schrijven.</span>
+                    </div>
+
+                    <input type="hidden" name="ml-submit" value="1">
+                    <div class="ml-form-embedSubmit">
+                      <button type="submit" class="primary btn btn--dark">Schrijf me in <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                      <button disabled="disabled" style="display: none;" type="button" class="loading btn btn--dark">
+                        <span class="ml-form-embedSubmitLoad"></span>
+                        <span class="sr-only">Bezig met inschrijven…</span>
+                      </button>
+                    </div>
+
+                    <p class="ml-privacy">We gebruiken je naam en e-mail enkel voor deze nieuwsbrief (via MailerLite) en delen ze met niemand.</p>
+                    <input type="hidden" name="anticsrf" value="true">
+                  </form>
+                </div>
+
+                <div class="ml-form-successBody row-success" style="display: none" role="status">
+                  <div class="ml-form-successContent">
+                    <div class="steam" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                      <svg viewBox="0 0 80 60"><path d="M8 14h52v18a22 22 0 0 1-22 22h-8A22 22 0 0 1 8 32Z"/><path d="M60 20h4a8 8 0 0 1 0 16h-5"/></svg>
+                    </div>
+                    <h3>Dankjewel.</h3>
+                    <p>Check je inbox en bevestig je inschrijving. Je eerste kop staat klaar.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="img/EmberRoot_logo_licht.svg" alt="Ember Root" width="150" height="42" loading="lazy">
+    <p>Ember Root is een fictief merk, gemaakt voor het vak Creative Automation (2026). Beelden en copy deels met AI gemaakt.</p>
+    <a href="https://www.instagram.com/" class="footer__ig">@emberroot.tea</a>
+  </footer>
+
+  <script>
+    function ml_webform_success_47944528() {
+      var $ = window.ml_jQuery || window.jQuery;
+      $('.ml-subscribe-form-47944528 .row-success').show();
+      $('.ml-subscribe-form-47944528 .row-form').hide();
+      document.dispatchEvent(new CustomEvent('ember:subscribed'));
+    }
+  </script>
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" type="text/javascript"></script>
+  <script>fetch("https://assets.mailerlite.com/jsonp/2762508/forms/203037013558953199/takel").catch(function () {});</script>
+  <script src="script.js" defer></script>
+</body>
+</html>
